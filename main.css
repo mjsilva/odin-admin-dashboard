@@ -8,7 +8,7 @@
   --c-dark-grey: #5f5f5f;
   --c-darker-grey: #343434;
   --c-white: #ffffff;
-  --c-black: #000;
+  --c-black: #232323;
 }
 
 /* Top level Grid Layout */
@@ -19,6 +19,7 @@ body {
   font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol";
+  color: var(--c-black);
 }
 
 .symbol-fill {
@@ -188,7 +189,8 @@ label[for="input-search"] {
   grid-row: 1 / span 2;
 }
 
-.projects .title {
+.projects .title,
+.announcements .title {
   margin-bottom: 10px;
 }
 
@@ -214,7 +216,7 @@ label[for="input-search"] {
   font-size: 0.8rem;
 }
 
-.project-card-container .card .actions{
+.project-card-container .card .actions {
   display: grid;
   grid-auto-flow: column;
   justify-content: right;
@@ -222,5 +224,32 @@ label[for="input-search"] {
   margin-top: 20px;
   margin-right: 20px;
   color: var(--c-darker-grey);
+}
 
+/* ANNOUNCEMENTS */
+.announcements-items {
+  background-color: var(--c-white);
+  padding: 30px 20px;
+  border-radius: 10px;
+}
+
+.announcement {
+  min-width: 100px;
+}
+
+.announcement:not(:last-child) {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--c-grey);
+}
+
+.announcement .announcement-title {
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.announcement p {
+  font-size: 0.6rem;
+  color: var(--c-dark-grey);
+  overflow: clip;
 }
