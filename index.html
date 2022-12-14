@@ -18,7 +18,7 @@
   <body>
     <section class="header">
       <div class="header-section top">
-        <div class="header-section-inner left">
+        <div class="header-section-top-inner left">
           <label for="input-search">
             <span class="material-symbols-outlined">search</span> </label
           ><input
@@ -28,22 +28,32 @@
             alt="search"
           />
         </div>
-        <div class="header-section-inner right">
+        <div class="header-section-top-inner right">
           <span class="material-symbols-outlined">notifications_active</span>
-          <div
-            class="profile-picture small"
-            style="
-              background-image: url('https://p194.p3.n0.cdn.getcloudapp.com/items/NQu4rPkb/d5009164-c360-4d5d-9130-b0c2cfa772cb.png?v=607d584a23810d513b8a033228274fad');
-            "
-          ></div>
+          <div class="profile-picture small">
+            <img src="./images/cat.png" alt="cat" />
+          </div>
           <div class="user-name">Morgan Oakley</div>
         </div>
       </div>
-      <div class="header-section bottom"></div>
+      <div class="header-section bottom">
+        <div class="header-section-bottom left">
+          <div class="profile-picture medium"><img src="./images/cat.png" alt="cat"></div>
+          <div class="greeted-mame-wrapper">
+            <div class="greeting">Hi there,</div>
+            <div class="user-name">Morgan Oakley (@morgan)</div>
+          </div>
+        </div>
+        <div class="header-section-bottom right">
+          <button class="button">New</button>
+          <button class="button">Upload</button>
+          <button class="button">Share</button>
+        </div>
+      </div>
     </section>
     <section class="sidebar">
       <div class="sidebar-section level0-nav">
-        <i class="material-symbols-outlined">dashboard</i>
+        <i class="material-symbols-outlined symbol-fill">dashboard</i>
         <div class="sidebar-item">Dashboard</div>
       </div>
       <div class="sidebar-section level1-nav">
@@ -69,6 +79,6 @@
         <div class="sidebar-item">Privacy</div>
       </div>
     </section>
-    <section class="content">content</section>
+    <section class="content"></section>
   </body>
 </html>

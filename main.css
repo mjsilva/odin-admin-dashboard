@@ -2,8 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap");
 
 :root {
-  --c-blue: #0088ca;
-  --c-yellow: #e7b64a;
+  --c-blue: #0889d2;
+  --c-yellow: #ebc847;
   --c-grey: #e3e8ef;
   --c-white: #ffffff;
   --c-black: #000;
@@ -82,19 +82,19 @@ body {
   text-align: right;
 }
 
-.header-section-inner {
+.header-section-top-inner {
   display: grid;
   grid-auto-flow: column;
   gap: 20px;
   align-items: center;
 }
 
-.header-section-inner.left {
+.header-section-top-inner.left {
   justify-content: left;
   padding-left: 30px;
 }
 
-.header-section-inner.right {
+.header-section-top-inner.right {
   justify-content: right;
   padding-right: 50px;
 }
@@ -113,9 +113,62 @@ label[for="input-search"] {
 }
 
 .profile-picture {
-  /*display: inline-block;*/
+  border-radius: 50%;
+  background-color: var(--c-yellow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-picture img {
+  width: 80%;
+}
+
+.profile-picture.small {
   width: 40px;
   height: 40px;
-  border-radius: 50%;
-  background-size: cover;
+}
+
+.profile-picture.medium {
+  width: 60px;
+  height: 60px;
+}
+
+.header-section-bottom {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-section-bottom.left {
+  justify-content: left;
+  padding-left: 30px;
+}
+
+.header-section-bottom.right {
+  justify-content: right;
+  padding-right: 50px;
+}
+
+.greeted-mame-wrapper {
+  display: grid;
+  grid-auto-flow: row;
+  text-align: left;
+}
+
+.greeted-mame-wrapper .greeting {
+  font-size: 0.8rem;
+}
+
+.greeted-mame-wrapper .user-name {
+  font-size: 1.3rem;
+}
+
+.button {
+  border: 0;
+  background-color: var(--c-blue);
+  color: var(--c-white);
+  border-radius: 20px;
+  padding: 5px 30px;
 }
