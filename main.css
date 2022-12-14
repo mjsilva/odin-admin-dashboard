@@ -172,3 +172,14 @@ label[for="input-search"] {
   border-radius: 20px;
   padding: 5px 30px;
 }
+
+/* content */
+.content {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.content .projects {
+  grid-row: 1 / span 2;
+}
