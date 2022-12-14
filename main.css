@@ -19,6 +19,10 @@ body {
     "Segoe UI Symbol";
 }
 
+.symbol-fill {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
 .header {
   grid-row: 1 / span 1;
   box-shadow: 0 2px 5px grey;
