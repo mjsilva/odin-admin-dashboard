@@ -1,14 +1,21 @@
+/* FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap");
+
 :root {
-  --c-blue: #4590ce;
+  --c-blue: #0088ca;
   --c-yellow: #e7b64a;
   --c-grey: #e3e8ef;
   --c-white: #ffffff;
 }
 
+/* Top level Grid Layout */
 body {
   display: grid;
-  grid-template-columns: 220px 1fr;
+  grid-template-columns: 250px 1fr;
   grid-template-rows: 120px repeat(5, 1fr);
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
 }
 
 .header {
@@ -25,4 +32,30 @@ body {
 .content {
   background-color: var(--c-yellow);
   grid-row: 2 / span 5;
+}
+
+/* Sidebar */
+.sidebar {
+  display: grid;
+  grid-auto-rows: min-content;
+  grid-gap: 50px;
+  padding: 20px;
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: var(--c-white);
+}
+
+.sidebar .sidebar-section {
+  display: grid;
+  grid-template-columns: repeat(2, min-content);
+  gap: 1rem;
+  align-items: center;
+}
+
+.sidebar .sidebar-section.level0-nav {
+  font-size: 1.5rem;
+}
+
+.sidebar .sidebar-section.level0-nav i {
+  font-size: 2.5rem;
 }
