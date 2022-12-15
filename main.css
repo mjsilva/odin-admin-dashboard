@@ -3,12 +3,14 @@
 
 :root {
   --c-blue: #0889d2;
+  --c-light-blue: #d9f0fd;
   --c-yellow: #ebc847;
   --c-grey: #e3e8ef;
   --c-dark-grey: #5f5f5f;
   --c-darker-grey: #343434;
   --c-white: #ffffff;
   --c-black: #232323;
+  --c-pink: #ff9aa6;
 }
 
 /* Top level Grid Layout */
@@ -34,13 +36,11 @@ body {
 }
 
 .sidebar {
-  background-color: var(--c-blue);
   grid-column: 1 / 2;
   grid-row: 1 / span 6;
 }
 
 .content {
-  background-color: var(--c-grey);
   grid-row: 2 / span 5;
 }
 
@@ -53,6 +53,7 @@ body {
   font-weight: 500;
   font-size: 1.1rem;
   color: var(--c-white);
+  background-color: var(--c-blue);
 }
 
 .sidebar .sidebar-section {
@@ -117,10 +118,25 @@ label[for="input-search"] {
 
 .profile-picture {
   border-radius: 50%;
-  background-color: var(--c-yellow);
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.profile-picture.yellow {
+  background-color: var(--c-yellow);
+}
+
+.profile-picture.pink {
+  background-color: var(--c-pink);
+}
+
+.profile-picture.grey {
+  background-color: var(--c-dark-grey);
+}
+
+.profile-picture.blue {
+  background-color: var(--c-light-blue);
 }
 
 .profile-picture img {
@@ -179,10 +195,12 @@ label[for="input-search"] {
 /* content */
 .content {
   display: grid;
-  grid-template-columns: 4fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 4fr minmax(200px, 1fr);
+  /* not sure why this works but it was the only way to get the trending cell to align to top */
+  grid-template-rows: 1fr 2fr;
   padding: 30px 20px;
   gap: 20px;
+  background-color: var(--c-grey);
 }
 
 .content .projects {
@@ -190,13 +208,14 @@ label[for="input-search"] {
 }
 
 .projects .title,
-.announcements .title {
+.announcements .title,
+.trending .title {
   margin-bottom: 10px;
 }
 
 .project-card-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
 }
 
@@ -227,7 +246,8 @@ label[for="input-search"] {
 }
 
 /* ANNOUNCEMENTS */
-.announcements-items {
+.announcements-items,
+.trending-items {
   background-color: var(--c-white);
   padding: 30px 20px;
   border-radius: 10px;
@@ -252,4 +272,30 @@ label[for="input-search"] {
   font-size: 0.6rem;
   color: var(--c-dark-grey);
   overflow: clip;
+}
+
+.trending-items {
+  display: grid;
+  gap: 20px;
+  align-items: center;
+  justify-content: start;
+}
+
+.trending-item {
+  display: grid;
+  grid-template-columns: min-content auto;
+  font-size: 0.7rem;
+  grid-column-gap: 10px;
+}
+
+.trending-item .profile-picture {
+  grid-row: 1 / span 2;
+}
+
+.trending-item .profile-name {
+  align-self: end;
+}
+
+.trending-item .profile-title {
+  color: var(--c-dark-grey);
 }
