@@ -73,6 +73,7 @@ body {
 
 .sidebar .sidebar-item:hover {
   cursor: pointer;
+  transform: scale(1.03);
 }
 
 /* HEADER */
@@ -198,6 +199,7 @@ label[for="input-search"] {
 
 .button:hover {
   cursor: pointer;
+  transform: scale(1.03);
 }
 
 /* content */
@@ -255,6 +257,7 @@ label[for="input-search"] {
 
 .project-card-container .card .actions div:hover {
   cursor: pointer;
+  transform: scale(1.03);
 }
 
 /* ANNOUNCEMENTS */
