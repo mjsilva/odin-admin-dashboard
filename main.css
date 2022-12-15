@@ -195,9 +195,8 @@ label[for="input-search"] {
 /* content */
 .content {
   display: grid;
-  grid-template-columns: 4fr minmax(200px, 1fr);
-  /* not sure why this works but it was the only way to get the trending cell to align to top */
-  grid-template-rows: 1fr 2fr;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: min-content 1fr;
   padding: 30px 20px;
   gap: 20px;
   background-color: var(--c-grey);
@@ -254,7 +253,7 @@ label[for="input-search"] {
 }
 
 .announcement {
-  min-width: 100px;
+  width: 25ch;
 }
 
 .announcement:not(:last-child) {
