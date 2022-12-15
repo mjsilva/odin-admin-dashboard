@@ -71,6 +71,10 @@ body {
   font-size: 2.5rem;
 }
 
+.sidebar .sidebar-item:hover {
+  cursor: pointer;
+}
+
 /* HEADER */
 .header {
   display: grid;
@@ -192,6 +196,10 @@ label[for="input-search"] {
   padding: 5px 30px;
 }
 
+.button:hover {
+  cursor: pointer;
+}
+
 /* content */
 .content {
   display: grid;
@@ -200,6 +208,7 @@ label[for="input-search"] {
   padding: 30px 20px;
   gap: 20px;
   background-color: var(--c-grey);
+  overflow: auto;
 }
 
 .content .projects {
@@ -214,12 +223,12 @@ label[for="input-search"] {
 
 .project-card-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
 }
 
 .project-card-container .card {
-  border-left: 5px solid var(--c-yellow);
+  border-left: 10px solid var(--c-yellow);
   border-radius: 10px;
   background-color: var(--c-white);
   box-shadow: 0 3px 3px #969696;
@@ -242,6 +251,10 @@ label[for="input-search"] {
   margin-top: 20px;
   margin-right: 20px;
   color: var(--c-darker-grey);
+}
+
+.project-card-container .card .actions div:hover {
+  cursor: pointer;
 }
 
 /* ANNOUNCEMENTS */
